@@ -7,6 +7,26 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+tr:hover {background-color: lightblue;}
+tr th{background-color: orange;}
+tr td a button:hover{background-color: lightgreen;}
+ tr td a .delete:hover{
+background-color: red;
+}
+th, td {
+  padding: 15px;
+}
+</style>
 <body>
 <%
 PlayerDao pd= new PlayerDao();
@@ -22,6 +42,7 @@ List<PlayerModel> li= pd.viewAll();
 <th>Wickets</th>
 <th>Matches Played</th>
 <th>Country</th>
+<th>Action</th>
 </tr>
 <%
 for(PlayerModel p:li){
@@ -35,7 +56,8 @@ for(PlayerModel p:li){
 <td><%=p.getWickets() %></td>
 <td><%=p.getNoOfMatches() %></td>
 <td><%=p.getNationality() %></td>
-<td><a href="editplayer.jsp?id=<%=p.getPlayer_id()%>">Update</a></td>
+<td><a href="editplayer.jsp?id=<%=p.getPlayer_id()%>"><button>Update</button></a>
+<a href="delete.jsp?id=<%=p.getPlayer_id() %>"><button class="delete">Delete</button></a></td>
 </tr>
 <%} %>
 </table>

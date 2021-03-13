@@ -13,11 +13,12 @@
   PlayerDao pd=new PlayerDao();
   Set<String> teamName = new TreeSet<String>();
   List<PlayerModel> l=pd.viewAll();
-  for(PlayerModel p:l){ 
-	  teamName.add(p.getNationality());
-  }
-  
   %>
+  <%
+  for(PlayerModel p:l){ 
+	  teamName.add(p.getNationality());%>
+  <%  } %>
+
   <%
 for(String str:teamName){
 	 %>

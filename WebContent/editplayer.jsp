@@ -74,10 +74,10 @@ PlayerModel pm= pd.getPlayerById(id);
                             <!-- <input class="form-control" type="number" value="Bishop"> -->
                             <div class="input-group mb-3">
                                 <select class="custom-select" id="iscountry" name="iscountry" value="<%=pm.getNationality()%>">
-                                  <option selected>India</option>
-                                  <option value="1">England</option>
-                                  <option value="2">Australia</option>
-                                  <option value="3">New Zealand</option>
+                                  <option selected value="India">India</option>
+                                  <option value="England">England</option>
+                                  <option value="Australia">Australia</option>
+                                  <option value="New Zeland">New Zealand</option>
                                 </select>
                               </div>
                         </div>
